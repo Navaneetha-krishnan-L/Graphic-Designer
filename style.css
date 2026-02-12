@@ -1,7 +1,9 @@
 /* --- VISUAL DESIGNER THEME --- */
 :root {
-    --accent: #E50914; /* Bold Red */
-    --bg: #0a0a0a;     /* Deep Black */
+    --accent: #E50914;
+    /* Bold Red */
+    --bg: #0a0a0a;
+    /* Deep Black */
     --card-bg: #1a1a1a;
     --text-main: #ffffff;
     --text-sub: #a0a0a0;
@@ -13,6 +15,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +34,7 @@ header {
     padding: 100px 10%;
     /* Ensure Pattern-works.png is in the same folder */
     background: linear-gradient(to right, #000 40%, transparent);
-    background-size:contain;
+    background-size: contain;
     background-position: center;
     background-blend-mode: overlay;
 }
@@ -102,6 +105,7 @@ h1 span {
     color: #1769ff;
     background: transparent;
 }
+
 .btn-behance:hover {
     background-color: #1769ff;
     color: white;
@@ -113,6 +117,7 @@ h1 span {
     display: flex;
     gap: 30px;
 }
+
 .software-item {
     color: var(--text-sub);
     font-size: 0.9rem;
@@ -120,6 +125,7 @@ h1 span {
     align-items: center;
     gap: 10px;
 }
+
 .software-item i {
     font-size: 1.5rem;
     color: var(--accent);
@@ -157,7 +163,7 @@ h1 span {
     position: relative;
     cursor: pointer;
     transition: transform 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover {
@@ -231,7 +237,7 @@ h1 span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.98);
+    background: rgba(0, 0, 0, 0.98);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -243,8 +249,9 @@ h1 span {
     height: auto;
     max-width: 95%;
     max-height: 85vh;
-    object-fit: contain; /* Prevents cropping */
-    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    object-fit: contain;
+    /* Prevents cropping */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
     border: none;
 }
 
@@ -310,9 +317,35 @@ footer {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    h1 { font-size: 3rem; }
-    header { padding: 100px 5%; align-items: center; text-align: center; }
-    .bio { border-left: none; padding-left: 0; border-top: 3px solid var(--accent); padding-top: 20px; }
-    .software-bar { flex-wrap: wrap; justify-content: center; }
-    .btn-group { justify-content: center; }
+    h1 {
+        font-size: 3rem;
+    }
+
+    header {
+        padding: 100px 5%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bio {
+        border-left: none;
+        padding-left: 0;
+        border-top: 3px solid var(--accent);
+        padding-top: 20px;
+    }
+
+    .software-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-group {
+        justify-content: center;
+    }
+
+   .email-display {
+       font-size: 1rem;
+   }
+    
+
 }
