@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navaneetha Krishnan | Graphic Design Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="hero-label">Portfolio</div>
+        <h1>Navaneetha<br><span>Krishnan</span></h1>
+        <p class="bio">
+            Professional Graphic Designer specialized in Brand Identity, Print Media, and Creative Photo Manipulation. I turn concepts into visual reality using Photoshop, Illustrator, and Creative Strategy.
+        </p>
+        
+        <div class="btn-group">
+            <a href="#portfolio" class="btn btn-primary">View Projects</a>
+            <a href="https://www.behance.net/navaneel" target="_blank" class="btn btn-behance">
+                <i class="fab fa-behance"></i> Behance
+            </a>
+        </div>
+
+        <div class="software-bar">
+            <div class="software-item"><i class="fab fa-adobe"></i> Adobe Suite</div>
+            <div class="software-item"><i class="fas fa-pen-nib"></i> Branding</div>
+            <div class="software-item"><i class="fas fa-image"></i> Photo Manipulation</div>
+            <div class="software-item"><i class="fas fa-print"></i> Print Design</div>
+        </div>
+    </header>
+
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-header">
+            <h2>Selected Works</h2>
+            <p class="subtitle">Click image to view full size | Click icon to download</p>
+        </div>
+
+        <div class="gallery">
+            
+            <div class="card">
+                <div class="card-image-container" onclick="openLightbox('../assets/ZARA.png', 'Fashion Brand Poster')">
+                    <img src="../assets/ZARA.png" alt="Zara Design">
+                </div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <div class="card-cat">Branding</div>
+                        <div class="card-title">ZARA Campaign</div>
+                    </div>
+                    <a href="../assets/ZARA.png" class="download-icon" download title="Download Image">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container" onclick="openLightbox('../assets/gym-flyer.jpeg', 'Fitness Promotional Flyer')">
+                    <img src="../assets/gym-flyer.jpeg" alt="Gym Flyer">
+                </div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <div class="card-cat">Print Media</div>
+                        <div class="card-title">Fitness Promotion</div>
+                    </div>
+                    <a href="../assets/gym-flyer.jpeg" class="download-icon" download title="Download Image">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container" onclick="openLightbox('../assets/Click-your-turns.png', 'Creative Digital Composition')">
+                    <img src="../assets/Click-your-turns.png" alt="Creative Art">
+                </div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <div class="card-cat">Digital Art</div>
+                        <div class="card-title">Click Your Turns</div>
+                    </div>
+                    <a href="../assets/Click-your-turns.png" class="download-icon" download title="Download Image">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container" onclick="openLightbox('../assets/Pattern-works.png', 'Abstract Pattern Design')">
+                    <img src="../assets/Pattern-works.png" alt="Pattern">
+                </div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <div class="card-cat">Texture Design</div>
+                        <div class="card-title">Geometric Patterns</div>
+                    </div>
+                    <a href="../assets/Pattern-works.png" class="download-icon" download title="Download Image">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container" onclick="openLightbox('../assets/menu1.png', 'Restaurant Menu Design (Front)')">
+                    <img src="../assets/menu1.png" alt="Menu Card 1">
+                </div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <div class="card-cat">Print Media / Branding</div>
+                        <div class="card-title">Menu Card Design</div>
+                    </div>
+                    <a href="../assets/menu1.png" class="download-icon" download title="Download Image">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container" onclick="openLightbox('../assets/menu2.png', 'Restaurant Menu Design (Back)')">
+                    <img src="../assets/menu2.png" alt="Menu Card 2">
+                </div>
+                <div class="card-info">
+                    <div class="card-text">
+                        <div class="card-cat">Print Media / Branding</div>
+                        <div class="card-title">Menu Card Design</div>
+                    </div>
+                    <a href="../assets/menu2.png" class="download-icon" download title="Download Image">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <h2 style="margin-bottom: 20px;">Ready to collaborate?</h2>
+        <a href="mailto:navaneethakrishnan100703@gmail.com" class="email-display">navaneethakrishnan100703@gmail.com</a>
+        
+        <div class="footer-socials">
+            <a href="https://www.behance.net/navaneel" target="_blank" title="Behance"><i class="fab fa-behance"></i></a>
+        </div>
+
+        <p class="copyright">© 2025 Navaneetha Krishnan L. | Graphic Design Portfolio</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="Full view">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

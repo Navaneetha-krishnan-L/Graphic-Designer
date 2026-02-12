@@ -1,0 +1,318 @@
+/* --- VISUAL DESIGNER THEME --- */
+:root {
+    --accent: #E50914; /* Bold Red */
+    --bg: #0a0a0a;     /* Deep Black */
+    --card-bg: #1a1a1a;
+    --text-main: #ffffff;
+    --text-sub: #a0a0a0;
+    --behance: #1769ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* --- HEADER / HERO --- */
+header {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 10%;
+    /* Ensure Pattern-works.png is in the same folder */
+    background: linear-gradient(to right, #000 40%, transparent);
+    background-size:contain;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+.hero-label {
+    color: var(--accent);
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+h1 span {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.bio {
+    max-width: 500px;
+    color: var(--text-sub);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+}
+
+/* --- BUTTONS --- */
+.btn-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: var(--text-main);
+    color: var(--bg);
+}
+
+.btn-primary:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.btn-behance {
+    border-color: #1769ff;
+    color: #1769ff;
+    background: transparent;
+}
+.btn-behance:hover {
+    background-color: #1769ff;
+    color: white;
+}
+
+/* --- SOFTWARE SKILLS --- */
+.software-bar {
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+}
+.software-item {
+    color: var(--text-sub);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.software-item i {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+/* --- PORTFOLIO GRID --- */
+.portfolio-section {
+    padding: 100px 5%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #666;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    z-index: 2;
+}
+
+.card-image-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-info {
+    padding: 25px;
+    background: var(--card-bg);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-text {
+    flex-grow: 1;
+}
+
+.card-cat {
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.download-icon {
+    color: var(--text-sub);
+    font-size: 1.2rem;
+    margin-left: 15px;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.download-icon:hover {
+    color: var(--accent);
+}
+
+/* --- LIGHTBOX (FULL VIEW) --- */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.98);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.lightbox img {
+    width: auto;
+    height: auto;
+    max-width: 95%;
+    max-height: 85vh;
+    object-fit: contain; /* Prevents cropping */
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    border: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.lightbox-caption {
+    margin-top: 15px;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 80px 10%;
+    background: #000;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.email-display {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.email-display:hover {
+    color: var(--accent);
+}
+
+.footer-socials {
+    margin: 30px 0;
+}
+
+.footer-socials a {
+    color: var(--text-sub);
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    color: white;
+}
+
+.copyright {
+    margin-top: 40px;
+    color: #555;
+    font-size: 0.8rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    header { padding: 100px 5%; align-items: center; text-align: center; }
+    .bio { border-left: none; padding-left: 0; border-top: 3px solid var(--accent); padding-top: 20px; }
+    .software-bar { flex-wrap: wrap; justify-content: center; }
+    .btn-group { justify-content: center; }
+}
